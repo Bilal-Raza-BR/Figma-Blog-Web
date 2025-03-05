@@ -50,15 +50,13 @@ function About() {
     }
   };
 
-  const getData = () => {
-     get(child(ref(database), 'FigmaPost'))
-      .then((abc) => {
-        setDataDb(abc.val());
-        console.log(dataDb);
-      })
-      .catch((c) => {
-        console.log(c);
-      });
+  const getData = async () => {
+    alert('hello')
+   let stored =  await get(ref(database), 'FigmaPost')
+   let value = stored.val()
+   console.log(value);
+   
+  
   };
 
   // useEffect(() => {
